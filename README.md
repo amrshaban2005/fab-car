@@ -8,9 +8,10 @@
 - contains rest api to access the the fabric api client from the web app
 
 # fab-car-client
+- web app
 - angular project
-- connect to the rest api as UI if fabcar chaincode 
-# how to run
+- connect to the fab-car-server rest api
+# How to run
 - install the fabcar chaincode in the fabric network
 - make required changes to profiles and gateway to connect to your network
 - run npm start on fab-car-server
