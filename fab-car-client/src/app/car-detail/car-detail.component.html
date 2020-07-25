@@ -1,0 +1,34 @@
+<div>
+    <div class="col-sm ">
+        <h2>Car Details</h2>
+    </div>
+
+</div>
+
+<div class="container">
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        {{carNo}}
+    </div>
+    <ul class="list-group list-group-flush" *ngIf="car">
+        <li class="list-group-item"><h2>Make</h2>   {{car.make}}</li>
+        <li class="list-group-item"><h2>Model</h2>  {{car.model}}</li>
+        <li class="list-group-item"><h2>Colour</h2> {{car.colour}}</li>
+        <li class="list-group-item"><h2>Owner</h2>  {{car.owner}}</li>
+    </ul>
+    <div class="card-body">
+    <button type="button" class="btn btn-link" [routerLink]="['/cars', carNo,'priv']">Private Data</button>
+    <button type="button" class="btn btn-link" [routerLink]="['/cars', carNo,'his']">History Data</button>
+    </div>
+</div>
+<div class="col-sm">
+    
+</div>
+<form class="form-inline">
+
+    <input type="text" name="owner" class="form-control mb-2 mr-sm-2" placeholder="New Owner" [(ngModel)]="owner">
+
+    <button type="button" class="btn btn-primary mb-2" (click)="onUpdateNewCar()">Update</button>
+</form>
+</div>
+<app-spinner></app-spinner>

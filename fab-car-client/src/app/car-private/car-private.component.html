@@ -1,0 +1,29 @@
+<div>
+    <div class="col-sm ">
+        <h2>Car Private Data</h2>
+    </div>
+
+</div>
+
+<div class="container">
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        {{carNo}}
+    </div>
+    <ul class="list-group list-group-flush" *ngIf="car">
+        <li class="list-group-item"><h2>Notes</h2>{{car.notes}}</li>
+        <li class="list-group-item"><h2>Price</h2>{{car.price}}</li>       
+    </ul>
+</div>
+<div class="col-sm">
+
+</div>
+<form class="form-inline">
+<input type="text" name="collection" class="form-control mb-2 mr-sm-2" placeholder="Collection" [(ngModel)]="collection">
+    <input type="text" name="notes" class="form-control mb-2 mr-sm-2" placeholder="Notes" [(ngModel)]="notes">
+    <input type="text" name="price" class="form-control mb-2 mr-sm-2" placeholder="Price" [(ngModel)]="price">
+
+    <button type="button" class="btn btn-primary mb-2" (click)="onUpdateCarPrivate()">Update</button>
+</form>
+</div>
+<app-spinner></app-spinner>

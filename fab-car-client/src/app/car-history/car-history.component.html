@@ -1,0 +1,31 @@
+<div>
+    <div class="col-sm">
+        <h2>Car History of {{carNo}}</h2>
+    </div>
+    
+
+</div>
+<div class="container">
+<table class="table  table-striped table-bordered  table-hover ">
+    <thead class="thead-dark ">
+        <tr>
+            <th scope="col">Tx ID</th>
+            <th scope="col">Make</th>
+            <th scope="col">Model</th>
+            <th scope="col">Colour</th>
+            <th scope="col">Owner</th>           
+        </tr>
+    </thead>
+    <tbody *ngFor="let car of cars">
+        <tr>
+            
+            <td>{{ car.Key }}</td>
+            <td>{{ car.Record.make }}</td>
+            <td>{{ car.Record.model }}</td>
+            <td>{{ car.Record.colour }}</td>
+            <td>{{ car.Record.owner }}</td>
+            
+        </tr>
+    </tbody>
+</table>
+</div>

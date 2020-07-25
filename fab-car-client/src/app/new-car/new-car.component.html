@@ -1,0 +1,40 @@
+<div class="justify-content-center">
+    <div class="col-sm ">
+        <h2>New Car</h2>
+    </div>
+
+</div>
+
+
+
+<div class="row justify-content-center">
+    <div class="col-lg-7">
+
+
+        <form>
+            <div class="form-group align-items-center">
+                <div class="col-md-6">
+                    <input type="text" name="carNumber" class="form-control" placeholder="Car Number"
+                        [(ngModel)]="carNumber">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="make" class="form-control" placeholder="Make" [(ngModel)]="make">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="model" class="form-control" placeholder="Model" [(ngModel)]="model">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="colour" class="form-control" placeholder="Colour" [(ngModel)]="colour">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="owner" class="form-control" placeholder="Owner" [(ngModel)]="owner">
+                </div>
+            </div>
+
+        </form>
+        <div class="form-group">
+            <button type="button" class="btn btn-dark" (click)="onNewCar()">Save</button>
+            <!-- <button type="button" class="btn btn-primary" [routerLink]="['/cars']">Cancel</button> -->
+        </div>
+    </div>
+</div>

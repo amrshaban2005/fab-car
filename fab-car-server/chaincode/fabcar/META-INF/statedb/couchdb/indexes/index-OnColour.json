@@ -1,0 +1,9 @@
+{
+    "index": {
+        "fields": [
+            "colour"
+        ]
+    },
+    "name": "colourindex",
+    "type": "json"
+}

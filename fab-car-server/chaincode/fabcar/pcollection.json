@@ -1,0 +1,12 @@
+[
+   
+    {
+        "name": "AcmePrivate",
+        "policy": "OR('AcmeMSP.member')",
+        "requiredPeerCount": 0,
+        "maxPeerCount": 3,
+        "blockToLive": 0,
+        "memberOnlyWrite": true,
+        "memberOnlyRead": true
+    }
+]

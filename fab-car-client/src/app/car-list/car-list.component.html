@@ -1,0 +1,47 @@
+<div >
+    <div class="col-sm ">
+        <h2>Car List</h2>
+    </div>
+   
+</div>
+<div class="container" >
+    <table class="table  table-striped table-bordered  table-hover ">
+        <thead class="thead-dark ">
+            <tr>
+                <th scope="col">Car</th>
+                <th scope="col">Make</th>
+                <th scope="col">Model</th>
+                <th scope="col">Colour</th>
+                <th scope="col">Owner</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let car of cars">
+            <tr>
+                <th scope="row"><a [routerLink]="['/cars', car.Key]">{{ car.Key }}</a></th>
+                <td>{{ car.Record.make }}</td>
+                <td>{{ car.Record.model }}</td>
+                <td>{{ car.Record.colour }}</td>
+                <td>{{ car.Record.owner }}</td>
+                <td><button type="button" class="btn btn-link" (click)="onDeleteCar(car)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<nav aria-label="Page navigation example">
+
+    <ul class="pagination justify-content-center">
+        <li class="page-item"><button type="button" class="page-link"
+                (click)="onGetAllCarsPrevoiusPage()">Previous</button>
+            <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+            <!-- <li class="page-item"><a class="page-link" href="#">Next</a></li> -->
+        <li class="page-item"><button type="button" class="page-link" (click)="onGetAllCarsNextPage()">Next</button>
+        </li>
+    </ul>
+</nav>
+<!-- <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+    <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner> -->
+<app-spinner></app-spinner>
